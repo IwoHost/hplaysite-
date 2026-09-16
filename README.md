@@ -3,7 +3,7 @@
 The site for [Hplay](https://iwohost.github.io/hplaysite-/), a click-wheel music
 player for your own files, built by HostLabo.
 
-Plain HTML and CSS, no framework and no build step, served by GitHub Pages
+This site is plain HTML and CSS with no build step, served by GitHub Pages
 straight from `main`.
 
 | Path | What it is |

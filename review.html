@@ -254,14 +254,6 @@
   .cols li::before{ content:""; position:absolute; left:0; top:.62em; width:6px; height:1.5px;
     background:var(--line); }
 
-  .friend{
-    margin-top:30px; background:var(--accent-soft); border:1px solid var(--accent);
-    border-radius:12px; padding:26px 26px 24px;
-  }
-  .friend h3{ margin-top:0; color:var(--accent-ink); }
-  .friend ol{ margin:0; padding-left:20px; display:grid; gap:9px; }
-  .friend li{ font-size:16px; color:var(--ink-soft); }
-  .friend li b{ color:var(--ink); }
 
   footer{
     margin-top:64px; padding-top:22px; border-top:1px solid var(--line);
@@ -295,8 +287,7 @@
     figcaption{ font-size:14px; }
     .strip{ grid-template-columns:repeat(2,1fr); gap:12px; }
     .story{ padding:18px 17px; }
-    .story p, .cols li, .friend li{ font-size:15.5px; }
-    .friend{ padding:20px 18px; }
+    .story p, .cols li{ font-size:15.5px; }
     .month .when b{ font-size:17px; }
     .rung{ padding:11px 2px; }
     footer{ font-size:11.5px; }
@@ -313,20 +304,20 @@
     <div>
       <div class="eyebrow">Project review · alpha · 14 September 2026</div>
       <h1>Hplay</h1>
-      <p class="dek">A classic click-wheel music player, rebuilt from scratch in one HTML file, wrapped in Android, and handed to its first alpha tester today.</p>
+      <p class="dek">A classic click-wheel music player, rebuilt from scratch, wrapped in Android, and handed to its first alpha tester today.</p>
       <div class="stamp">
         <span class="now">v38.0 “Barney”</span>
         <span>alpha</span>
         <span>60 days old</span>
         <span>69 commits</span>
-        <span>1 file</span>
+        <span>no frameworks</span>
       </div>
     </div>
   </header>
 
   <section>
-    <p class="lede">It started on 16 July 2026 as a single file called <code>index.html</code>, 1,703 lines long. Sixty days later it is 3,520 lines, has 50 screens, plays video, spins a vinyl record with a tonearm that tracks inward as the song runs down, and keeps a year of listening history it never sends anywhere.</p>
-    <p>The thing that makes it unusual is the constraint. There is no build step, no framework, no bundler, no <code>node_modules</code>. Markup, styling, click wheel physics, audio graph, IndexedDB library, marketplace client: all of it sits in one file you can open by double-clicking it. That file gets copied into an Android WebView project, and the result is an app on a phone.</p>
+    <p class="lede">It started on 16 July 2026 at 1,703 lines. Sixty days later it is 3,520 lines, has 50 screens, plays video, spins a vinyl record with a tonearm that tracks inward as the song runs down, and keeps a year of listening history it never sends anywhere.</p>
+    <p>The thing that makes it unusual is the constraint. There is no build step, no framework, no bundler, nothing installed from a package manager. Layout, click wheel physics, audio graph, library storage, marketplace client: all of it written by hand. The same player gets wrapped in an Android project, and the result is an app on a phone.</p>
 
     <dl class="spec">
       <div><dt>Lines</dt><dd>3,520</dd></div>
@@ -505,23 +496,13 @@
       </div>
     </div>
 
-    <div class="friend">
-      <h3>Handing it to a friend today</h3>
-      <ol>
-        <li><b>Show the wheel first, not the menu.</b> Spin it. Anyone who grew up with a click wheel gets the whole app in about four seconds, which is more than any explanation will do.</li>
-        <li><b>Then Cover Style → Vinyl, and play something.</b> The record rolling in on a track change is the most convincing thing the app does.</li>
-        <li><b>Warn them about the rescan.</b> If they point it at a music folder while something is playing, next and previous may stop working until they restart. It's known, and it's top of the list.</li>
-        <li><b>Ask them to find one thing without help.</b> Watching someone hunt for the sleep timer will teach you more than any amount of asking what they think.</li>
-        <li><b>Let them break it.</b> First outside tester on a sixty-day-old project. They'll find something. That's why you're doing this.</li>
-      </ol>
-    </div>
   </section>
 
   <footer>
     <span>Hplay v38.0 “Barney” · alpha</span>
     <span>16 July to 14 September 2026</span>
-    <span>69 commits · 25 versions · 1 file</span>
-    <span>github.com/IwoHost/Hplay</span>
+    <span>69 commits · 25 versions</span>
+    <span>iwohost.github.io/hplaysite-</span>
   </footer>
 
 </div>

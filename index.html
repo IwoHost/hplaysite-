@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Hplay</title>
-<meta name="description" content="Hplay is a click-wheel music player for your own files, built in a single HTML file and wrapped in an Android app. Free, offline, no account. Twenty demo tracks to download.">
+<meta name="description" content="Hplay is a click-wheel music player for the music you already own. Free, offline, no account, no cloud. Twenty demo tracks to download.">
 <meta name="theme-color" content="#1b6fd0">
 <meta property="og:title" content="Hplay">
-<meta property="og:description" content="A click-wheel music player for your own files. One HTML file, no account, no cloud. Currently in alpha.">
+<meta property="og:description" content="A click-wheel music player for the music you already own. No account, no cloud, no ads. Currently in alpha.">
 <meta property="og:url" content="https://iwohost.github.io/hplaysite-/">
 <meta property="og:image" content="https://iwohost.github.io/hplaysite-/img/device.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -306,15 +306,38 @@
   .card h3{ margin:0 0 6px; font-size:17.5px; }
   .card p{ font-size:15px; color:var(--ink-soft); margin:0; }
 
-  /* ---- contact ---- */
-  .contact{ display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-    gap:1px; background:var(--line-soft); border:1px solid var(--line-soft);
-    border-radius:11px; overflow:hidden; margin-top:26px; }
-  .contact div{ background:var(--panel); padding:17px 19px; }
-  .contact dt{ font-family:var(--mono); font-size:11.5px; letter-spacing:.1em;
-    text-transform:uppercase; color:var(--muted); margin-bottom:5px; }
-  .contact dd{ font-size:16px; font-weight:500; overflow-wrap:anywhere; }
-  .contact dd.soon{ color:var(--muted); font-weight:400; }
+  /* ---- where to find me ---- */
+  .social{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(252px,1fr));
+    gap:14px; margin-top:26px;
+  }
+  .soc{
+    display:flex; align-items:center; gap:15px;
+    padding:16px 18px; border-radius:13px;
+    background:var(--panel); border:1px solid var(--line-soft);
+    box-shadow:var(--shadow); text-decoration:none; color:inherit;
+  }
+  a.soc:hover{ border-color:var(--accent); }
+  a.soc:hover .ico{ background:var(--accent); color:#fff; }
+  .ico{
+    flex:0 0 auto; width:42px; height:42px; border-radius:11px;
+    display:grid; place-items:center;
+    background:var(--accent-soft); color:var(--accent-ink);
+  }
+  .ico svg{ width:21px; height:21px; display:block; }
+  .who{ min-width:0; line-height:1.35; }
+  .who b{ display:block; font-family:var(--display); font-weight:700; font-size:16px; letter-spacing:-.005em; }
+  .who span{ display:block; font-size:14.5px; color:var(--ink-soft); overflow-wrap:anywhere; }
+  a.soc .who span{ color:var(--accent); }
+  .soc.soon{ background:var(--panel-2); border-style:dashed; box-shadow:none; }
+  .soc.soon .ico{ background:var(--line-soft); color:var(--muted); }
+  .soc.soon .who b{ color:var(--ink-soft); }
+  .soc.soon .who span{ color:var(--muted); }
+  .pill{
+    margin-left:auto; flex:0 0 auto; align-self:flex-start;
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--muted); border:1px solid var(--line); border-radius:999px; padding:3px 8px;
+  }
 
   footer{
     margin-top:64px; padding-top:22px; border-top:1px solid var(--line);
@@ -379,11 +402,11 @@
     <div>
       <div class="eyebrow">A music player by HostLabo &middot; alpha</div>
       <h1>Hplay</h1>
-      <p class="dek">A click-wheel music player for the songs you already own. One HTML file, no account, no cloud, no ads. It runs in a browser and it runs on Android.</p>
+      <p class="dek">A click-wheel music player for the songs you already own. No account, no cloud, no ads. It runs in a browser and it runs on Android.</p>
       <div class="stamp">
         <span class="now">v38.0 &ldquo;Barney&rdquo;</span>
         <span>alpha</span>
-        <span>one file</span>
+        <span>offline</span>
         <span>works offline</span>
         <span>free</span>
       </div>
@@ -398,11 +421,11 @@
     <div class="chrome"><span class="n">01</span><h2>What Hplay is</h2><span class="batt"><i></i></span></div>
     <p class="lede">Most music apps want an account, a subscription and a connection. Hplay wants a folder.</p>
     <p>You point it at music that is already on your device and it plays it, with a wheel you spin instead of a list you scroll. Cover art, albums, artists, playlists, search, a sleep timer, a vinyl view that spins while the song runs, and five different screen looks. Nothing is uploaded anywhere. There is no sign-in, because there is nothing to sign in to.</p>
-    <p>The whole player is a single HTML file, written by hand without a framework or a build step. The Android version is that same file in a wrapper, so it can hold the lock screen, the notification and the volume keys like a normal music app.</p>
+    <p>The whole thing is written by hand, without a framework and without a build step. The Android version wraps that same player, so it can hold the lock screen, the notification and the volume keys like a normal music app.</p>
 
     <dl class="spec">
       <div><dt>Version</dt><dd>38.0 <small>Barney</small></dd></div>
-      <div><dt>Built from</dt><dd>1 <small>HTML file</small></dd></div>
+      <div><dt>Screens</dt><dd>50 <small>and counting</small></dd></div>
       <div><dt>Screen looks</dt><dd>5 <small>light to paper</small></dd></div>
       <div><dt>Demo tracks</dt><dd>20 <small>51 minutes</small></dd></div>
       <div><dt>Accounts</dt><dd>0</dd></div>
@@ -813,14 +836,35 @@
   <section id="contact">
     <div class="chrome"><span class="n">07</span><h2>Get in touch</h2><span class="batt"><i></i></span></div>
     <p>Bug reports, ideas and complaints are all welcome. The fastest way is email.</p>
-    <dl class="contact">
-      <div><dt>Email</dt><dd><a href="mailto:hostlabosupport@gmail.com">hostlabosupport@gmail.com</a></dd></div>
-      <div><dt>Instagram</dt><dd><a href="https://instagram.com/hostlabo">@hostlabo</a></dd></div>
-      <div><dt>TikTok</dt><dd class="soon">Coming soon</dd></div>
-      <div><dt>YouTube</dt><dd class="soon">Coming soon</dd></div>
-      <div><dt>Discord</dt><dd class="soon">A server, in future</dd></div>
-      <div><dt>Other site</dt><dd><a href="https://iwohost.github.io/HostLab/">HostLab</a></dd></div>
-    </dl>
+    <div class="social">
+      <a class="soc" href="mailto:hostlabosupport@gmail.com">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="2.5" y="4.8" width="19" height="14.4" rx="3"/><path d="m3.4 7 8.6 6 8.6-6"/></svg></span>
+        <span class="who"><b>Email</b><span>hostlabosupport@gmail.com</span></span>
+      </a>
+      <a class="soc" href="https://instagram.com/hostlabo">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.3" cy="6.7" r="1.15" fill="currentColor" stroke="none"/></svg></span>
+        <span class="who"><b>Instagram</b><span>@hostlabo</span></span>
+      </a>
+      <a class="soc" href="https://iwohost.github.io/HostLab/">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9.2"/><path d="M2.9 12h18.2M12 2.8c2.4 2.5 3.6 5.6 3.6 9.2s-1.2 6.7-3.6 9.2c-2.4-2.5-3.6-5.6-3.6-9.2S9.6 5.3 12 2.8z"/></svg></span>
+        <span class="who"><b>HostLab</b><span>The other site</span></span>
+      </a>
+      <div class="soc soon">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 3v11.6a3.2 3.2 0 1 1-2.9-3.19"/><path d="M13.4 3.2c.45 2.75 2.1 4.4 4.9 4.72"/></svg></span>
+        <span class="who"><b>TikTok</b><span>Not up yet</span></span>
+        <span class="pill">soon</span>
+      </div>
+      <div class="soc soon">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.4" y="5.2" width="19.2" height="13.6" rx="4.2"/><path d="M10.3 9.3v5.4L15.1 12z" fill="currentColor" stroke="none"/></svg></span>
+        <span class="who"><b>YouTube</b><span>Not up yet</span></span>
+        <span class="pill">soon</span>
+      </div>
+      <div class="soc soon">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M20.5 18.6 21 7.4a2 2 0 0 0-1.3-1.95A15.6 15.6 0 0 0 15.2 4.5l-.5 1.3a13.4 13.4 0 0 0-5.4 0l-.5-1.3a15.6 15.6 0 0 0-4.5.95A2 2 0 0 0 3 7.4l.5 11.2 3.4 1.4 1.1-1.8a11.6 11.6 0 0 0 8 0l1.1 1.8z"/><circle cx="9.1" cy="12.6" r="1.35" fill="currentColor" stroke="none"/><circle cx="14.9" cy="12.6" r="1.35" fill="currentColor" stroke="none"/></svg></span>
+        <span class="who"><b>Discord</b><span>A server, one day</span></span>
+        <span class="pill">soon</span>
+      </div>
+    </div>
   </section>
 
   <footer>
