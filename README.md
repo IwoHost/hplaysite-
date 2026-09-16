@@ -1,6 +1,6 @@
 # Hplaysite
 
-The site for [Hplay](https://iwohost.github.io/hplaysite/), a click-wheel music
+The site for [Hplay](https://iwohost.github.io/hplaysite-/), a click-wheel music
 player for your own files, built by HostLabo.
 
 Plain HTML and CSS, no framework and no build step, served by GitHub Pages
