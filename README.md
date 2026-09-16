@@ -1,7 +1,7 @@
 # Hplaysite
 
 The site for [Hplay](https://iwohost.github.io/hplaysite-/), a click-wheel music
-player for your own files, built by HostLabo.
+player for Android, built by HostLabo.
 
 This site is plain HTML and CSS with no build step, served by GitHub Pages
 straight from `main`.
@@ -23,5 +23,5 @@ name and sleeve is made up. Free to download and keep.
 
 ## The player
 
-Hplay itself is not in this repository. It is in a closed alpha and is handed
-out one person at a time: hostlabosupport@gmail.com.
+The app itself is not in this repository. It is in a closed alpha, not on the
+Play Store, and handed out one person at a time: hostlabosupport@gmail.com.

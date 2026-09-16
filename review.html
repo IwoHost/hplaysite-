@@ -304,20 +304,20 @@
     <div>
       <div class="eyebrow">Project review · alpha · 14 September 2026</div>
       <h1>Hplay</h1>
-      <p class="dek">A classic click-wheel music player, rebuilt from scratch, wrapped in Android, and handed to its first alpha tester today.</p>
+      <p class="dek">A classic click-wheel music player, rebuilt from scratch for Android, and handed to its first alpha tester today.</p>
       <div class="stamp">
         <span class="now">v38.0 “Barney”</span>
         <span>alpha</span>
         <span>60 days old</span>
         <span>69 commits</span>
-        <span>no frameworks</span>
+        <span>Android</span>
       </div>
     </div>
   </header>
 
   <section>
     <p class="lede">It started on 16 July 2026 at 1,703 lines. Sixty days later it is 3,520 lines, has 50 screens, plays video, spins a vinyl record with a tonearm that tracks inward as the song runs down, and keeps a year of listening history it never sends anywhere.</p>
-    <p>The thing that makes it unusual is the constraint. There is no build step, no framework, no bundler, nothing installed from a package manager. Layout, click wheel physics, audio graph, library storage, marketplace client: all of it written by hand. The same player gets wrapped in an Android project, and the result is an app on a phone.</p>
+    <p>The thing that makes it unusual is the constraint. No framework, no component library, nothing pulled in from a package manager. The click wheel physics, the audio graph, the library storage, the marketplace client: all of it written by hand, and all of it shipping as an app you install on a phone.</p>
 
     <dl class="spec">
       <div><dt>Lines</dt><dd>3,520</dd></div>
@@ -391,7 +391,7 @@
         <div>
           <div class="bar" style="width:100%"></div>
           <span class="count">38 commits</span>
-          <p>Everything at once. The player, the click wheel, the library in IndexedDB, lyrics, themes, the marketplace, the Android wrapper, decals you could drag around the body. Built fast and broadly. The skeleton of nearly every feature the app has today was laid down in two weeks.</p>
+          <p>Everything at once. The player, the click wheel, the library in IndexedDB, lyrics, themes, the marketplace, the Android build, decals you could drag around the body. Built fast and broadly. The skeleton of nearly every feature the app has today was laid down in two weeks.</p>
         </div>
       </div>
       <div class="month">
@@ -453,7 +453,7 @@
 
     <div class="story">
       <span class="tag">The backdrop that never advanced</span>
-      <h3>A browser won't decode a video nobody can see</h3>
+      <h3>The engine won't decode a video nobody can see</h3>
       <p>The plan for video was to sample frames onto a canvas and blur them behind the screen. It produced exactly one frame and then froze. The video element was tried at one pixel, at sixty-four pixels, at zero opacity, at one percent opacity, behind everything in the stacking order. Same result every time.</p>
       <p>Chrome stops producing frames for a video that isn't really being rendered, and hiding it more cleverly can't help, because the hiding <em>is</em> the problem. So the whole approach went in the bin. Instead a second, silent copy of the file plays as the backdrop, nudged back into step whenever it drifts more than a third of a second.</p>
     </div>
@@ -488,9 +488,9 @@
         <ul>
           <li>Song IDs are regenerated on every folder rescan, but playlists and the resume point store IDs. A rescan while music is playing can break next and previous. This is the most important thing left to fix.</li>
           <li>Deleting a song from a scanned folder doesn't stick; it comes back on the next scan.</li>
-          <li>There's no export or backup. Everything lives in one browser database on one phone.</li>
-          <li>Resume-on-restart doesn't work in the Android app yet.</li>
-          <li>The native wrapper is five changes behind the web app, including the file filter that lets video through.</li>
+          <li>There's no export or backup. Everything lives in one database on one phone.</li>
+          <li>Resume-on-restart doesn't work yet.</li>
+          <li>The build the testers have is five changes behind the current one, including the file filter that lets video through.</li>
           <li>No test suite in the repo. The checks exist, but they live outside it.</li>
         </ul>
       </div>
